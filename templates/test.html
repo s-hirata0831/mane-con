@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/マ.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>マネコン</title>
+</head>
+<body bgcolor="black" text="white">
+    <nav class="bg-black">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <a onclick="window.location.reload(true);" class="flex items-center space-x-3 rtl:space-x-reverse">
+              <img src="images/マ.png" class="h-8" alt="Mana-ConLogo" />
+              <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white title-font">マネコン オーナーズページ</span>
+          </a>
+          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <li>
+                <a href="#" class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400" id="currentTime" aria-current="page">Now Date</a>
+                <script>
+                        var currentTime = new Date();
+                        var formattedDate = currentTime.toDateString();
+                        document.getElementById("currentTime").innerHTML = formattedDate;
+                </script>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+          
+          <div class="grid grid-cols-2 gap-1">
+            <div class="flex justify-start items-start gap-1">
+                <div class="w-full grid grid-cols-1 gap-1">
+                <div class="w-full  p-3 bg-white border border-gray-900 rounded-lg shadow dark:bg-gray-900 dark:border-gray-600">
+                    <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">次の出店日</h5>
+                    <p  class="text-xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-5xl">
+                        <span id="PetDisplay" class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">
+                            2024/03/10(SUN)
+                        </span>
+                    </p>
+                    <h5  class="mt-1 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-8xl">
+                        <span id="PetDisplay" class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">
+                            7:00-19:00
+                        </span>
+                    </h5>
+                </div>
+                <div class="w-full  p-3 bg-white border border-gray-900 rounded-lg shadow dark:bg-gray-900 dark:border-gray-600">
+                    <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">鍵の開閉</h5>
+                    <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Open</button>
+                    <button type="button" class="text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Close</button>
+                </div>
+                </div>
+            </div>
+            
+            <div class="flex justify-start items-start gap-1">
+            <div class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <div class="flex justify-start items-center gap-1">
+            <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="images/CU.png" alt="Company"/>
+            <a href="#" class="name-font">
+                <h5 class="text-2xl font-semibold tracking-tight text-gray-900 dark:text-white name-font">セカンドリテーリング(株)CU様</h5>
+            </a>
+          </div>
+             <a href="https://maps.app.goo.gl/2N9ctgrQ77vBDVBAA" target="_blank" class="inline-flex items-center text-blue-600 hover:underline">
+              交流ページへ
+              <svg class="w-3 h-3 ms-2.5 rtl:rotate-[270deg]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778"/>
+              </svg>
+          </a>    
+          <div class="grid grid-cols-2 gap-1">
+          <div class="mt-4 p-3 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-600">
+              <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">温度</h5>
+              <h5  class="mt-1 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
+                  <span id="variableDisplay" class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">
+                      Loading...
+                  </span>
+              </h5>
+              
+              <script>
+                  function updateVariable(){
+                      var xhr= new XMLHttpRequest();
+                      xhr.onreadystatechange = function(){
+                          if(xhr.readyState == 4 && xhr.status == 200){
+                              document.getElementById('variableDisplay').innerText = xhr.responseText;
+                          }
+                      };
+                      xhr.open("GET", "http://172.20.10.2:5000/get_variable", true);
+                      xhr.send();
+                  }
+                  
+                  setInterval(updateVariable, 1000);
+                  updateVariable();
+              </script>
+          </div>
+          <div class="mt-4 p-3 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-600">
+              <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">湿度</h5>
+              <h5  class="mt-1 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
+                  <span id="PetDisplay" class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">
+                      Loading...
+                  </span>
+                  <script>
+                      function updatePet(){
+                          var xhr= new XMLHttpRequest();
+                          xhr.onreadystatechange = function(){
+                              if(xhr.readyState == 4 && xhr.status == 200){
+                                  document.getElementById('PetDisplay').innerText = xhr.responseText;
+                              }
+                          };
+                          xhr.open("GET", "http://172.20.10.2:5000/get_pet", true);
+                          xhr.send();
+                      }
+                  
+                      setInterval(updatePet, 1000);
+                      updateVariable();
+              </script>
+              </h5>
+          </div>
+      
+          </div>
+          <div class="grid grid-cols-2 gap-1">
+            <div class="mt-4 p-3 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-600">
+                <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">エアコン</h5>
+                <h5  class="mt-1 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
+                    <span id="variableDisplay" class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">
+                        Loading...
+                    </span>
+                </h5>
+                
+                <script>
+                    function updateVariable(){
+                        var xhr= new XMLHttpRequest();
+                        xhr.onreadystatechange = function(){
+                            if(xhr.readyState == 4 && xhr.status == 200){
+                                document.getElementById('variableDisplay').innerText = xhr.responseText;
+                            }
+                        };
+                        xhr.open("GET", "http://172.20.10.2:5000/get_variable", true);
+                        xhr.send();
+                    }
+                    
+                    setInterval(updateVariable, 1000);
+                    updateVariable();
+                </script>
+            </div>
+            <div class="mt-4 p-3 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-600">
+                <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">照明</h5>
+                <h5  class="mt-1 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
+                    <span id="PetDisplay" class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">
+                        Loading...
+                    </span>
+                    <script>
+                        function updatePet(){
+                            var xhr= new XMLHttpRequest();
+                            xhr.onreadystatechange = function(){
+                                if(xhr.readyState == 4 && xhr.status == 200){
+                                    document.getElementById('PetDisplay').innerText = xhr.responseText;
+                                }
+                            };
+                            xhr.open("GET", "http://172.20.10.2:5000/get_pet", true);
+                            xhr.send();
+                        }
+                    
+                        setInterval(updatePet, 1000);
+                        updateVariable();
+                </script>
+                </h5>
+            </div>
+          </div>
+          <div class="mt-4 p-3 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-600">
+              <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">あなたの看板</h5>
+          <div class="flex justify-center items-center gap-2">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d203.0218085134583!2d135.4401559!3d35.4956492!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5fff87c7b13ff51b%3A0x714629d3993b9e51!2z5a2m55Sf5piH6ZmN5Y-j!5e0!3m2!1sja!2sjp!4v1706165660024!5m2!1sja!2sjp" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          </div>
+      </div>
+      
+            </div>
+          </div>
+</body>
+</html>

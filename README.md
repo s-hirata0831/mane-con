@@ -19,14 +19,12 @@
 企業誘致と市場調査，実際に企業が店舗を使う際のウェブアプリ作ったろ！
 
 <div align="center">
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vR1e5fXo759bO0ojsRExOcqqWY-WSJFtWaDxA13EoD0lXOGpQ_u_eG8FoLB4mjlwNdYDCwdyPcLhma5/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-</div>
 
-[![スライド]](https://docs.google.com/presentation/d/e/2PACX-1vR1e5fXo759bO0ojsRExOcqqWY-WSJFtWaDxA13EoD0lXOGpQ_u_eG8FoLB4mjlwNdYDCwdyPcLhma5/embed?start=false&loop=false&delayms=3000)
+[スライドはここから見れます。](https://docs.google.com/presentation/d/e/2PACX-1vR1e5fXo759bO0ojsRExOcqqWY-WSJFtWaDxA13EoD0lXOGpQ_u_eG8FoLB4mjlwNdYDCwdyPcLhma5/embed?start=false&loop=false&delayms=3000)
 
 ## Usage
 
-実際の構成は上記のスライドを参照してください。  
+実際の構成は上記リンクにあるのスライドを参照してください。  
 ウェブアプリの動作の Gif を下に載せておきます。
 
 <div align="center">

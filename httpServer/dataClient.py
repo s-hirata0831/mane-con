@@ -24,10 +24,12 @@ def send_post_led(value):
     response=requests.post(url, data=json.dumps(data), headers=headers)
 	
     if response.status_code == 200:
-        print('POST request successfull --led--')
+        print('POST request successfull --Humid--')
     else:
         print(f'POST request faiiled with status code: {response.status_code}')
-		
+
+
+#ここは今回は使ってないが他のデータを格納できる。
 def send_post_serial(value):
     url='http://172.20.10.2:5000/get_serial'
     data={'value': value}
@@ -40,7 +42,8 @@ def send_post_serial(value):
         print('POST request successfull --Serial--')
     else:
         print(f'POST request faiiled with status code: {response.status_code}')
-        
+
+#ここは今回は使ってないが他のデータを格納できる。     
 def send_post_serial2(value):
     url='http://172.20.10.2:5000/get_serial2'
     data={'value': value}

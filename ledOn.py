@@ -1,3 +1,6 @@
+# FlaskからこのPythonファイルを動かそうとしてたが，依存関係やらなんやらで動かず...
+#もう少し時間があればできたかもですね。(言い訳)
+
 import RPi.GPIO as GPIO
 from time import sleep
  

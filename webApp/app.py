@@ -1,6 +1,6 @@
 from flask import Flask, render_template, Response
 from time import sleep
-from camera import Camera
+from webApp.camera import Camera
 import os
 
 #makeFlaskInstance

@@ -1,9 +1,9 @@
-<div align="center">
-    <img src="https://github.com/s-hirata0831/mane-con/blob/main/doc/%E3%83%9E.png?raw=true">
-</div>
-
 <h2 align="center">
     マネコン
+</h2>
+
+<div align="center">
+    <img src="https://github.com/s-hirata0831/mane-con/blob/main/doc/%E3%83%9E.png?raw=true">
 </div>
 
 ## OverView
@@ -35,17 +35,17 @@
 動けばよし！精神で作ったので，クレームは一切受け付けておりませので悪しからずご了承くださいませ。  
 構成を少し話しておくと，
 
-- form
+- form  
   GAS で自動的にフォームを作成，情報収集するプログラムが入ってます。
-- httpServer
+- httpServer  
   Arduino からシリアル通信を経由して取得したデータをスライスして格納し，Flask に POST するところのプログラム。  
   dataClient.py がシリアル通信取得からスライスして格納。  
   dataServer.py が格納された情報を Flask に POST。
-- webApp
+- webApp  
   Flask で構築したウェブアプリ。  
   温湿度は html 内部に書いた JavaScript で毎秒 http.server に対して GET リクエストを送っている。  
   スタイルは tailwindCSS で当てたので自分で書いたところは一切ない。
-- その他
+- その他  
   node_modules→TailwindCSS 関連  
   ledOn.py→GPIO 制御しようとして作ったけど放置したやつ
 

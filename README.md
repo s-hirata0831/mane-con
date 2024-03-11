@@ -18,8 +18,6 @@
 ↓  
 企業誘致と市場調査，実際に企業が店舗を使う際のウェブアプリ作ったろ！
 
-<div align="center">
-
 [スライドはここから見れます。](https://docs.google.com/presentation/d/e/2PACX-1vR1e5fXo759bO0ojsRExOcqqWY-WSJFtWaDxA13EoD0lXOGpQ_u_eG8FoLB4mjlwNdYDCwdyPcLhma5/embed?start=false&loop=false&delayms=3000)
 
 ## Usage
